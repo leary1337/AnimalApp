@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="242.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.AnimalEditorWindowController">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label text="Nickname:">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameEdit" GridPane.columnIndex="1">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </TextField>
+      <Label text="Host name:" GridPane.rowIndex="1">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hostNameEdit" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </TextField>
+      <Label text="Kind:" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="kindEdit" prefWidth="150.0" promptText="Cat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Years:" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="ageYearsEdit" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" max="100" min="1" />
+         </valueFactory>
+      </Spinner>
+      <Label text="Months:" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="ageMonthsEdit" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <valueFactory>
+            <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" max="11" min="1" />
+         </valueFactory>
+      </Spinner>
+      <Button mnemonicParsing="false" onAction="#confirmEditAction" text="Confirm" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#cancelAction" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</GridPane>
